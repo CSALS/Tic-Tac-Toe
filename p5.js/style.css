@@ -1,23 +1,20 @@
 html, body {
     height: 100%;
-  }
+    width: 100%;
+    margin:0;
+    padding:0;
+}
   
 body {
-/* display: flex; */
-/* margin: 0; */
-/* This centers our sketch horizontally. */
-/* justify-content: center; */
-
-/* This centers our sketch vertically. */
-/* align-items: center; */
-/* position: relative;
-right:50px; */
+  opacity:.6; 
 }
 
 #reset {
     /* position: relative;
     top:200px;
     left:225px; */
-    border:1.5px solid black;
+    border:2.5px solid black;
     position: relative;
+    border-radius: 12px;
+    font-size: 17px;
 }
