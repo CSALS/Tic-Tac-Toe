@@ -10,9 +10,9 @@ body {
 }
 
 #reset {
-    /* position: relative;
-    top:200px;
-    left:225px; */
+    position: relative;
+    top:400px;
+    left:125px;
     border:2.5px solid black;
     position: relative;
     border-radius: 12px;

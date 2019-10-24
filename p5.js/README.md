@@ -1,1 +1,2 @@
-Need to add <p> element in sketch.js to display who is the current player and center all these elements in the web page
+ - Need to add <p> element in sketch.js to display who is the current player and center all these elements in the web     page
+ - Display result is a different way
