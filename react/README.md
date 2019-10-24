@@ -1,7 +1,6 @@
-- Complete calculateWinner() function
 - Add reset button
 - Stop when one player wins or game is tie
-
+- Gitignore node_modules and unnecessary stuff in react folder
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
