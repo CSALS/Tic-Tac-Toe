@@ -1,2 +1,2 @@
-Implementing tic-tac-toe using javascript libraries p5.js , react.
-Also use pure javascript
+- Implementing tic-tac-toe using javascript libraries p5.js , react.
+- Will also write in pure javascript
