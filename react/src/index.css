@@ -13,9 +13,13 @@ body {
     display: table;
   }
   
-  .status {
+  .currentStatus {
     margin-bottom: 10px;
     font-size: 18pt;
+  }
+  .finalStatus {
+    margin-bottom: 10px;
+    font-size: 50pt;
   }
   
   .square {

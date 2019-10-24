@@ -1,5 +1,5 @@
 - Add reset button
-- Stop when one player wins or game is tie
+- Highlight when match is finished
 - Gitignore node_modules and unnecessary stuff in react folder
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

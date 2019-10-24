@@ -78,7 +78,7 @@ class Board extends React.Component {
         );
     }
     render() {
-        let finalStatus;
+        let finalStatus,currentStatus;
         let boardStatus = this.boardIsFull();
         let gameStatus = this.calculateWinner();
         if(boardStatus === true) {
@@ -94,17 +94,22 @@ class Board extends React.Component {
         else {
             //Board is not full. Either there is winner or game not completed yet
             if(gameStatus === null) {
-                finalStatus = `Current player: ${(this.state.currentPlayerIsX ? 'X':'O')}`;
+                currentStatus = `Current player: ${(this.state.currentPlayerIsX ? 'X':'O')}`;
             }
             else {
                 finalStatus = `Winner is player ${gameStatus}`;
             }
         }
+        let statusJSX;
+        if(currentStatus) {
+            statusJSX = <div className="currentStatus">{currentStatus}</div>;
+        }
+        else {
+            statusJSX = <div className="finalStatus">{finalStatus}</div>;
+        }
         return (
             <div>
-                <div className="status">
-                    {finalStatus}    
-                </div>
+                {statusJSX}
                 <div className="board-row">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
