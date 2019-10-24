@@ -37,10 +37,10 @@ class Board extends React.Component {
             [2, 4, 6],
         ];
         for (let i = 0; i < lines.length; i++) {
-        const [a, b, c] = lines[i];
-        if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-            return squares[a];
-        }
+            const [a, b, c] = lines[i];
+            if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+                return squares[a];
+            }
         }
         return null;
     }
@@ -55,6 +55,10 @@ class Board extends React.Component {
     handleClick(i) {
         const squares = this.state.squares.slice(); //creates copy of squares
         let nextPlayerIsX = this.state.currentPlayerIsX;
+        if(this.calculateWinner() != null || this.boardIsFull() === true) {
+            //Game is completed (either tie or somebody won)
+            return;
+        }
         if(squares[i] === null) {
             //Empty cell
             squares[i] = this.state.currentPlayerIsX ? 'X' : 'O';
