@@ -1,6 +1,7 @@
 - Add reset button
 - Highlight when match is finished
 - Gitignore node_modules and unnecessary stuff in react folder
+- Use the image used in p5 as background
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
