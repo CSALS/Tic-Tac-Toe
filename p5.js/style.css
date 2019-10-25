@@ -7,11 +7,18 @@ html, body {
   
 body {
   opacity:.6; 
+  
+}
+
+#status {
+  background: blue;
+  width:361px;
+  height:25px;
 }
 
 #reset {
     position: relative;
-    top:400px;
+    top:425px;
     left:125px;
     border:2.5px solid black;
     position: relative;

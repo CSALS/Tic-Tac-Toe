@@ -17,9 +17,15 @@ body {
     margin-bottom: 10px;
     font-size: 18pt;
   }
-  .finalStatus {
+  .tieStatus {
     margin-bottom: 10px;
-    font-size: 50pt;
+    font-size: 18pt;
+    color: red;
+  }
+  .winnerStatus {
+    margin-bottom: 10px;
+    font-size: 18pt;
+    color: rgb(30, 182, 30);
   }
   
   .square {
@@ -54,7 +60,4 @@ body {
     display: inline-block;
   }
   
-  .game-info {
-    margin-left: 20px;
-  }
   

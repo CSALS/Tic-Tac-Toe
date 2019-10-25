@@ -4,9 +4,9 @@ import './index.css';
 
 function Square(props) {
     return (
-    <button className = "square" onClick = {props.onClick}>
-        {props.value}
-    </button>
+        <button className = "square" onClick = {props.onClick}>
+            {props.value}
+        </button>
     );
 }
 function probability(n) {
@@ -78,17 +78,17 @@ class Board extends React.Component {
         );
     }
     render() {
-        let finalStatus,currentStatus;
+        let winnerStatus,currentStatus,tieStatus;
         let boardStatus = this.boardIsFull();
         let gameStatus = this.calculateWinner();
         if(boardStatus === true) {
             //Board is full . Either it is tie or X or O
             if(gameStatus === null) {
                 //TIE
-                finalStatus = 'Game is tie.';
+                tieStatus = 'Game is tie.';
             }
             else {
-                finalStatus = `Winner is player ${gameStatus}`;
+                winnerStatus = `Winner is player ${gameStatus}`;
             }
         }
         else {
@@ -97,15 +97,19 @@ class Board extends React.Component {
                 currentStatus = `Current player: ${(this.state.currentPlayerIsX ? 'X':'O')}`;
             }
             else {
-                finalStatus = `Winner is player ${gameStatus}`;
+                winnerStatus = `Winner is player ${gameStatus}`;
             }
         }
         let statusJSX;
         if(currentStatus) {
             statusJSX = <div className="currentStatus">{currentStatus}</div>;
+            //Highlight the squares
+        }
+        else if(tieStatus) {
+            statusJSX = <div className="tieStatus">{tieStatus}</div>
         }
         else {
-            statusJSX = <div className="finalStatus">{finalStatus}</div>;
+            statusJSX = <div className="winnerStatus">{winnerStatus}</div>;
         }
         return (
             <div>
@@ -135,7 +139,7 @@ class Game extends React.Component {
         return (
         <div className="game">
             <div className="game-board">
-            <Board />
+                <Board />
             </div>
             <div className="game-info">
             <div>{/* status */}</div>

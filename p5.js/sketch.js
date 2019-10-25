@@ -45,12 +45,13 @@ function nextTurn() {
                     //if 0 then only that square is free
                     if(board[i][j] == 0 ){
                         board[i][j] = currentPlayer;
+                        currentPlayer = -currentPlayer;
                     }
                 }
             }
         }
     }
-    currentPlayer = -currentPlayer;
+    
 }
 function mousePressed() {
     nextTurn();
